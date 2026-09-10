@@ -8,8 +8,8 @@
 **Arranque:** 2026-09-10
 
 **Próximo paso concreto:**
-Instalar el entorno (venv + numpy, pandas, matplotlib, jupyter) y hacer el
-primer notebook cargando el CSV de ventas de la cremería.
+Escribir las tres notas de concepto de la sesión del 10-09 — `vector`,
+`matriz` y `producto-punto` — con `/concepto`, antes de tocar NumPy en código.
 
 ---
 
@@ -19,7 +19,7 @@ primer notebook cargando el CSV de ventas de la cremería.
 formal, de vectores, matrices, derivadas y probabilidad.
 
 ### Semana 1 — NumPy
-- [ ] Entorno listo: venv, numpy, pandas, matplotlib, jupyter
+- [x] Entorno listo: venv, numpy, pandas, matplotlib, jupyter
 - [ ] Arrays, shapes, indexing, broadcasting
 - [ ] Operaciones vectorizadas vs. bucles (medir la diferencia de tiempo)
 - [ ] 3Blue1Brown, *Essence of Linear Algebra*: caps. 1-4
@@ -80,4 +80,4 @@ Regla: todo proyecto termina desplegado en el VPS.
 
 | Semana | Fechas | Horas | Qué salió | Qué se atascó |
 |---|---|---|---|---|
-| 1 | 2026-09-10 → | | | |
+| 1 | 2026-09-10 → | 2 | Álgebra lineal mínima (vector, matriz, producto punto) y el modelo de memoria de NumPy. Entorno instalado. | Sintetizar: el mecanismo lo dedujo, pero el resumen en una frase se le achicaba a algo circular. |
