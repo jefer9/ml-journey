@@ -1,0 +1,11 @@
+# Normalizar finales de linea: en el repo siempre LF.
+* text=auto eol=lf
+
+# Los scripts de PowerShell quieren CRLF en Windows.
+*.ps1 text eol=crlf
+
+# Los de shell tienen que llegar con LF a Linux/WSL o el shebang rompe.
+*.sh text eol=lf
+
+# Notebooks: LF, y asi los diffs no explotan.
+*.ipynb text eol=lf
