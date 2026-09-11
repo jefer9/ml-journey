@@ -1,6 +1,40 @@
 # Puesta en marcha
 
-Cuatro pasos, quince minutos.
+## Máquina nueva (el camino corto)
+
+Si el repo ya existe en GitHub y solo estás montando otra máquina:
+
+```powershell
+# Windows / PowerShell
+git clone https://github.com/<usuario>/ml-journey.git
+cd ml-journey
+.\scripts\setup.ps1
+```
+
+```bash
+# Linux, macOS o WSL
+git clone https://github.com/<usuario>/ml-journey.git
+cd ml-journey
+bash scripts/setup.sh
+```
+
+El script crea el `.venv`, instala las versiones exactas de `requirements.txt`
+y corre `scripts/verificar-entorno.py`. Es idempotente: si el venv ya está, solo
+sincroniza dependencias. Si termina en "Entorno listo", podés estudiar.
+
+Para activar el entorno en cada terminal nueva:
+
+```powershell
+.\.venv\Scripts\Activate.ps1   # Windows
+source .venv/bin/activate      # Linux / macOS / WSL
+```
+
+Si PowerShell se niega a correr el script de activación:
+`Set-ExecutionPolicy -Scope CurrentUser RemoteSigned`.
+
+El resto de esta página es el camino largo, para la primera vez.
+
+---
 
 ## 1. Repo
 
@@ -32,12 +66,28 @@ conviene es duplicarlo en los dos lados.
 
 ## 3. Entorno de Python
 
+Lo hace el script de setup de arriba. A mano, si preferís verlo:
+
 ```bash
 python3 -m venv .venv
-source .venv/bin/activate
-pip install numpy pandas matplotlib jupyter scikit-learn
+source .venv/bin/activate        # .\.venv\Scripts\Activate.ps1 en Windows
+pip install -r requirements.txt
+python scripts/verificar-entorno.py
+```
+
+`requirements.txt` está pineado con `pip freeze`. Cuando instales algo nuevo,
+volvé a congelarlo y commiteá el cambio:
+
+```bash
+pip install <paquete>
 pip freeze > requirements.txt
 ```
+
+Así todas las máquinas corren la misma versión de NumPy, y un resultado raro
+nunca es "será la versión".
+
+Jupyter: `jupyter lab` desde la raíz del repo, con el venv activado. El kernel
+`python3` que ve el notebook es el del venv.
 
 ## 4. Primer uso de Claude Code
 
@@ -70,3 +120,14 @@ Tres cosas, y con eso alcanza:
 
 Si en algún momento se vuelve una carga administrativa, recortá el sistema, no
 el estudio. La herramienta está al servicio de la ruta.
+
+---
+
+## Si algo se rompe
+
+| Síntoma | Causa casi siempre |
+|---|---|
+| `ModuleNotFoundError: numpy` | El venv no está activado, o estás en otra terminal. |
+| Jupyter no ve las librerías | Abriste `jupyter` global, no el del venv. Activá primero. |
+| `Activate.ps1 no se puede cargar` | Política de ejecución: `Set-ExecutionPolicy -Scope CurrentUser RemoteSigned`. |
+| Números distintos a los de tus notas | Versión distinta: `pip install -r requirements.txt` otra vez. |

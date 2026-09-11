@@ -5,6 +5,11 @@ Una nota por idea. Atómica: si la nota explica dos cosas, son dos notas.
 **La regla:** si copiaste y pegaste, no cuenta. Se escribe con tus palabras o
 no se escribe. Una nota que no podés explicar en voz alta está incompleta.
 
+**Formato (desde 2026-09-11):** tres o cuatro líneas. Qué es, dónde falla, y
+los links. Nada más. La versión larga de ocho secciones se usa solo para los
+conceptos que de verdad cuesten — backpropagation, atención, RAG — no para
+cada idea que aparece.
+
 Se enlazan entre sí con `[[wikilinks]]`. Con el tiempo el grafo de Obsidian
 muestra qué áreas están conectadas y cuáles quedaron sueltas — eso suele
 señalar exactamente lo que no entendiste.

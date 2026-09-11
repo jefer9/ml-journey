@@ -1,4 +1,4 @@
-# <Concepto>
+# Producto punto
 
 **En una frase:**
 <Qué es, con tus palabras. Si no te sale en una frase, todavía no lo entendés.>
@@ -9,4 +9,4 @@
 **Links:** [[concepto-relacionado]] · [[otro]]
 
 ---
-Fecha: AAAA-MM-DD · Fase: N
+Fecha: 2026-09-11 · Fase: 0

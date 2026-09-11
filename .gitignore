@@ -5,11 +5,16 @@ __pycache__/
 venv/
 .ipynb_checkpoints/
 
-# Datos: nunca subir datos reales del negocio
-datos/
+# Datos: nunca subir datos reales del negocio.
+# Ojo: si se excluye el directorio entero ("datos/"), git ni siquiera mira
+# adentro y la excepción de abajo no se aplica nunca. Por eso "datos/*".
+datos/*
 *.csv
 *.parquet
 *.db
+# ...salvo los de ejemplo, anonimizados, que sirven para reproducir
+!datos/README.md
+!datos/ejemplo/
 !datos/ejemplo/*.csv
 
 # Modelos

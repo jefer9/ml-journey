@@ -8,8 +8,14 @@
 **Arranque:** 2026-09-10
 
 **Próximo paso concreto:**
-Escribir las tres notas de concepto de la sesión del 10-09 — `vector`,
-`matriz` y `producto-punto` — con `/concepto`, antes de tocar NumPy en código.
+`notebooks/01-numpy-basico.ipynb` — cinco consignas, de shapes a la trampa del
+`dtype`. Empezar por el punto 3: medir vectorizado contra bucle con un millón
+de precios.
+
+> Cambio de formato (11-09): las notas de concepto pasan a ser de tres líneas
+> — qué es, dónde falla, links. La plantilla larga queda solo para conceptos
+> que cuesten de verdad. Las notas salen de lo que sorprenda al correr código,
+> no antes de escribirlo.
 
 ---
 
